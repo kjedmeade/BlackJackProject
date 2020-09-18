@@ -16,6 +16,11 @@ public class Deck {
 		}
 	}
 
+	public int cardsLeftInDeck() {
+		return cards.size();
+
+	}
+
 	public int checkDeckSize() {
 		return cards.size();
 	}
@@ -25,6 +30,10 @@ public class Deck {
 	}
 
 	public Card dealCard() {
+		return cards.remove(0);
+	}
+	
+	public Card dealCard(Hand hand) {
 		return cards.remove(0);
 	}
 
