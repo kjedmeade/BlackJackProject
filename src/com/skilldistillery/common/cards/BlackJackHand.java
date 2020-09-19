@@ -27,13 +27,26 @@ public boolean isBust() {
 	int totalValue=0;
 	for (Card card : this.cards) {
 		totalValue+= card.getValue();
+	
 	}
 	if (totalValue>=21) {
-		System.out.println("BUST");
 		return true;
 	}
 	return false;
 }
+
+//public boolean isBlackJack() {
+//	int totalValue=0;
+//	for (Card card : this.cards) {
+//		totalValue+= card.getValue();
+//	
+//	}
+//	if (totalValue==21) {
+//		return true;
+//	}
+//	return false;
+//}
+
 public void showCard(Card c) {
 	System.out.println(c.toString());	
 }

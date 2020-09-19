@@ -19,7 +19,7 @@ public class Dealer {
 		System.out.println("The Dealer has been dealt the following card");
 		this.dealerHand.showCard(c);
 		dealerHand.addCard(c);
-		System.out.println(dealerHand.getHandValue());
+		
 	}
 	
 	public void dealerShowFirstCard() {
@@ -40,6 +40,9 @@ public class Dealer {
 	public void setDealerHand(BlackJackHand dealerHand) {
 		this.dealerHand = dealerHand;
 	}
+public void dealerShuffleCards() {
+		deck.shuffle();
+}
 
 
 }
