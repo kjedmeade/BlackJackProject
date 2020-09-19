@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class BlackJackTable {
 	Dealer dealer = new Dealer();
 	Player player = new Player();
-	
 
 	public void launch() {
 		Scanner sc = new Scanner(System.in);
@@ -45,10 +44,10 @@ public class BlackJackTable {
 						System.out.println("You Bust, Dealer Wins");
 						keepGoing = false;
 					}
-//				if (player.getPlayerHand().isBlackJack()) {
-//					System.out.println("BLACKJACK, You Win");
-//					keepGoing = false;
-//				}
+					if (player.getPlayerHand().isBlackJack()) {
+						System.out.println("BLACKJACK, You Win");
+						keepGoing = false;
+					}
 
 				}
 
@@ -65,16 +64,17 @@ public class BlackJackTable {
 								System.out.println("Dealer Busts, You win");
 								keepGoing2 = false;
 								keepGoing4 = false;
-								keepGoing=false;
+								keepGoing = false;
 								break;
 							}
 
-//					if (dealer.getDealerHand().isBlackJack() {
-//						System.out.println("BLACKJACK, Dealer Wins");
-//						keepGoing2=false;
-//						keepGoing=false;
-//						break;
-//					}
+							if (dealer.getDealerHand().isBlackJack()) {
+								System.out.println("BLACKJACK, Dealer Wins");
+								keepGoing2 = false;
+								keepGoing4 = false;
+								keepGoing = false;
+								break;
+							}
 							if (dealer.getDealerHand().getHandValue() < 17) {
 								continue;
 							} else {
@@ -85,14 +85,14 @@ public class BlackJackTable {
 						if (keepGoing4) {
 							if ((player.getPlayerHand().getHandValue()) > dealer.getDealerHand().getHandValue()) {
 								System.out.println("Player wins");
-								keepGoing4= false;
-								keepGoing=false;
+								keepGoing4 = false;
+								keepGoing = false;
 								break;
 							}
 							if ((player.getPlayerHand().getHandValue()) < dealer.getDealerHand().getHandValue()) {
 								System.out.println("Dealer wins");
-								keepGoing4= false;
-								keepGoing=false;
+								keepGoing4 = false;
+								keepGoing = false;
 								break;
 
 							}
@@ -102,13 +102,13 @@ public class BlackJackTable {
 				}
 
 			}
-			
+
 			System.out.println("Would you like to play again: yes or no:");
 			String ans = null;
 			ans = sc.nextLine();
 			if (ans.equals("yes")) {
-			player= new Player();
-			dealer =new Dealer();
+				player = new Player();
+				dealer = new Dealer();
 				continue;
 			}
 			if (ans.equals("no")) {

@@ -29,23 +29,23 @@ public boolean isBust() {
 		totalValue+= card.getValue();
 	
 	}
-	if (totalValue>=21) {
+	if (totalValue>21) {
 		return true;
 	}
 	return false;
 }
 
-//public boolean isBlackJack() {
-//	int totalValue=0;
-//	for (Card card : this.cards) {
-//		totalValue+= card.getValue();
-//	
-//	}
-//	if (totalValue==21) {
-//		return true;
-//	}
-//	return false;
-//}
+public boolean isBlackJack() {
+	int totalValue=0;
+	for (Card card : this.cards) {
+		totalValue+= card.getValue();
+	
+	}
+	if (totalValue==21) {
+		return true;
+	}
+	return false;
+}
 
 public void showCard(Card c) {
 	System.out.println(c.toString());	
