@@ -10,15 +10,17 @@ public class BlackJackTable {
 		Scanner sc = new Scanner(System.in);
 		boolean keepGoing3 = true;
 		while (keepGoing3) {
-			System.out.println("Welcome to BlackJack");
+			System.out.println("WELCOME TO BLACKJACK");
 			System.out.println("You will be playing against the dealer");
 			System.out.println("You will be dealt two cards, and the Dealer will be dealt two cards");
 			System.out.println("");
 			dealer.dealerShuffleCards();
+			System.out.println("YOUR HAND:");
 			dealer.dealCardToPlayerFaceUp(player);
 			System.out.println("");
 			dealer.dealCardToDealerFaceDown();
 			System.out.println("");
+			System.out.println("YOUR HAND:");
 			dealer.dealCardToPlayerFaceUp(player);
 			System.out.println("");
 			player.getPlayerHand().isBust();
@@ -34,10 +36,12 @@ public class BlackJackTable {
 				System.out.println("The dealer's first card was:");
 				dealer.dealerShowFirstCard();
 				System.out.println("");
-				if (input.equals("hit")) {
-					System.out.println("DealerHand" + dealer.getDealerHand().toString());
-					System.out.println("Dealer Hand Total: " + dealer.getDealerHand().getHandValue());
+				if (input.equals("hit")|| input.equals("HIT")||input.equals("Hit")||input.equals("h")) {
+					System.out.println("DEALER HAND:");
+					System.out.println(dealer.getDealerHand().toString());
+					System.out.println("DEALER HAND TOTAL: " + dealer.getDealerHand().getHandValue());
 					System.out.println("");
+					System.out.println("YOUR HAND:");
 					dealer.dealCardToPlayerFaceUp(player);
 					System.out.println("");
 					if (player.getPlayerHand().isBust()) {
@@ -51,17 +55,18 @@ public class BlackJackTable {
 
 				}
 
-				if (input.equals("stand")) {
+				if (input.equals("stand")|| input.equals("Stand")||input.equals("STAND")) {
 					while (keepGoing4) {
 						while (keepGoing2) {
 							System.out.println("");
-							System.out.println("DealerHand" + dealer.getDealerHand().toString());
-							System.out.println("Dealer Hand Total: " + dealer.getDealerHand().getHandValue());
+							System.out.println("DEALER HAND");
+							System.out.println(dealer.getDealerHand().toString());
+							System.out.println("DEALER HAND TOTAL: " + dealer.getDealerHand().getHandValue());
 							System.out.println("");
 							dealer.dealCardToDealerFaceUp();
 							System.out.println("");
 							if (dealer.getDealerHand().isBust()) {
-								System.out.println("Dealer Busts, You win");
+								System.out.println("Dealer Busts, You Win");
 								keepGoing2 = false;
 								keepGoing4 = false;
 								keepGoing = false;
@@ -106,7 +111,7 @@ public class BlackJackTable {
 			System.out.println("Would you like to play again: yes or no:");
 			String ans = null;
 			ans = sc.nextLine();
-			if (ans.equals("yes")) {
+			if (ans.equals("yes")|| ans.equals("YES")||ans.equals("Yes")) {
 				player = new Player();
 				dealer = new Dealer();
 				continue;

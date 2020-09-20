@@ -11,12 +11,12 @@ public class Dealer {
 
 	public void dealCardToDealerFaceDown() {
 		dealerHand.addCard(deck.dealCard());
-		System.out.println("The Dealer has been dealt a card face down");
+		System.out.println("THE DEALER HAS BEEN DEALT A CARD FACEDOWN");
 	}
 
 	public void dealCardToDealerFaceUp() {
 		Card c = deck.dealCard();
-		System.out.println("The Dealer has been dealt the following card");
+		System.out.println("The Dealer has been dealt the following card:");
 		this.dealerHand.showCard(c);
 		dealerHand.addCard(c);
 		
@@ -30,7 +30,7 @@ public class Dealer {
 		Card c = deck.dealCard();
 		player.getPlayerHand().addCard(c);
 		System.out.println(player.getPlayerHand());
-		System.out.println("Total Value of Your Hand:" + player.getPlayerHand().getHandValue());
+		System.out.println("YOUR HAND TOTAL: " + player.getPlayerHand().getHandValue());
 	}
 
 	public BlackJackHand getDealerHand() {
