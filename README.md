@@ -1,10 +1,10 @@
-##BLACK JACK PROJECT
+## BLACK JACK PROJECT
 
- ##Overview
+ ## Overview
  In this program, the user plays against the dealer in a game of BlackJack. After both parties (dealer and player) are dealt two cards, the player is asked whether they would like to hit or stand. A player can hit multiple times, but stand only once before the dealer begins his turn. A winner is found when either party reaches 21 in card value (Black Jack), doesn't bust (card value greater than 21), or has a card value less than the opponent.
 
 
- ##Topics
+ ## Topics
 
  *Taking User Input
  User input is retrieved via a simple scanner. After both parties are dealt two cards, the player is asked whether they would like to be dealt another card or keep their hand. The options for taking this input are "hit" and "stand".
