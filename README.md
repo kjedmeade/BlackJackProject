@@ -11,12 +11,12 @@
  A series of classes were used to build this program. Classes included BlackJackApp (main run program), BlackJackTable (game sequence), Hand(abstract class for general card array/hand information/methods) BlackJackHand (concrete class for card array/hand information/methods ), Card (individual card information/methods), Deck (Deck information/methods), etc. Two classes, Rank and Suit, are enum classes. In the BlackJackTable class, various  objects from these classes are instantiated/created (e.g. player, dealer, deck) to run the program.
 
   ### Highlighted Methods
-  
- * The methods dealCardToDealerFaceDown(), dealCardToDealerFaceUp(), and dealCardToPlayerFaceUp(Player player) are used in the program to request the dealer/computer to deal cards to the player or dealer. These methods stem from the Dealer class.
+
+ * The method's dealCardToDealerFaceDown(), dealCardToDealerFaceUp(), and dealCardToPlayerFaceUp(Player player) are used in the program to request the dealer/computer to deal cards to the player or dealer. These methods stem from the Dealer class.
 
  * dealerShuffleCards() calls the deck of 52 cards created to be shuffled using the Collections.shuffle() method found in the Deck class.
 
-* The methods' dealer.getDealerHand().getHandValue() and player.getPlayerHand().getHandValue() are used to get the total value of the requested hand.
+* The method's dealer.getDealerHand().getHandValue() and player.getPlayerHand().getHandValue() are used to get the total value of the requested hand.
 
 * The boolean methods isBlackJack() and isBust() are used to identify whether the player or dealer has won or gone over the 21 card value limit.
 
